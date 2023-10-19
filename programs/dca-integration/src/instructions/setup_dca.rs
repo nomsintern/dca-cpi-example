@@ -98,16 +98,17 @@ pub fn setup_dca(
     );
 
     // allow 5 minutes for testing
-    require!(
-        cycle_frequency == 60_i64 || cycle_frequency as u64 == SECONDS_PER_DAY,
-        EscrowErrors::InvalidPlanParameters,
-    );
-    // force 24-hr frequency (could change if supported plans change)
-    // require_eq!(
-    //     cycle_frequency as u64,
-    //     SECONDS_PER_DAY,
+    // require!(
+    //     cycle_frequency == 60_i64 || cycle_frequency as u64 == SECONDS_PER_DAY,
     //     EscrowErrors::InvalidPlanParameters,
     // );
+
+    // force 24-hr frequency (could change if supported plans change)
+    require_eq!(
+        cycle_frequency as u64,
+        SECONDS_PER_DAY,
+        EscrowErrors::InvalidPlanParameters,
+    );
 
     // make sure plan is supported
     require!(

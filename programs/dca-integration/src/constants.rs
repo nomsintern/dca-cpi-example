@@ -22,15 +22,15 @@ pub const VAULT_SIGNER_PDA: [u8; 32] = [
     197, 181, 78, 233, 155, 239, 247, 235, 205, 152, 183,
 ];
 
-pub const ACCEPTED_DURATION_SECONDS: [u32; 4] = [
-    60 * 5,  // 5 minutes for testing
+pub const ACCEPTED_DURATION_SECONDS: [u32; 3] = [
+    //60 * 5,  // 5 minutes for testing
     1209600, // 14 days
     2592000, // 30 days
     7776000, // 90 days
 ];
 
-pub const AIRDROP_BPS: [u64; 4] = [
-    200,  // 2% @ 5 minutes for testing
+pub const AIRDROP_BPS: [u64; 3] = [
+    //200,  // 2% @ 5 minutes for testing
     200,  // 2% @ 14 days
     500,  // 5% @ 30 days
     1000, // 10% @ 90 days
